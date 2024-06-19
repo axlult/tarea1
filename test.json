@@ -1,0 +1,132 @@
+{
+  "resources": [
+    {
+      "_id": "req_list_products",
+      "name": "List Products",
+      "url": "{{base_url}}/products",
+      "method": "GET",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{access_token}}"
+        }
+      ]
+    },
+    {
+      "_id": "req_list_categories",
+      "name": "List Categories",
+      "url": "{{base_url}}/categories",
+      "method": "GET",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{access_token}}"
+        }
+      ]
+    },
+    {
+      "_id": "req_create_product",
+      "name": "Create Product",
+      "url": "{{base_url}}/products",
+      "method": "POST",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{access_token}}"
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"name\": \"New Product\",\n  \"description\": \"Product description\",\n  \"price\": 100.0,\n  \"stockQuantity\": 10,\n  \"category\": {\n    \"id\": 1\n  }\n}"
+      }
+    },
+    {
+      "_id": "req_create_category",
+      "name": "Create Category",
+      "url": "{{base_url}}/categories",
+      "method": "POST",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{access_token}}"
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"name\": \"New Category\",\n  \"description\": \"Category description\"\n}"
+      }
+    },
+    {
+      "_id": "req_update_product",
+      "name": "Update Product",
+      "url": "{{base_url}}/products/1",
+      "method": "PUT",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{access_token}}"
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"name\": \"Updated Product\",\n  \"description\": \"Updated description\",\n  \"price\": 150.0,\n  \"stockQuantity\": 20,\n  \"category\": {\n    \"id\": 1\n  }\n}"
+      }
+    },
+    {
+      "_id": "req_update_category",
+      "name": "Update Category",
+      "url": "{{base_url}}/categories/1",
+      "method": "PUT",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{access_token}}"
+        },
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n  \"name\": \"Updated Category\",\n  \"description\": \"Updated description\"\n}"
+      }
+    },
+    {
+      "_id": "req_delete_product",
+      "name": "Delete Product",
+      "url": "{{base_url}}/products/1",
+      "method": "DELETE",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{access_token}}"
+        }
+      ]
+    },
+    {
+      "_id": "req_delete_category",
+      "name": "Delete Category",
+      "url": "{{base_url}}/categories/1",
+      "method": "DELETE",
+      "headers": [
+        {
+          "name": "Authorization",
+          "value": "Bearer {{access_token}}"
+        }
+      ]
+    }
+  ]
+}
